@@ -4,12 +4,22 @@
 @import "libs";
 @import "global";
 
+@mixin df-aic {
+  display: flex;
+  align-items: center;
+}
+@mixin df-jcc {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin df-jcc-aic {
+  @include df-jcc;
+  align-items: center;
+}
 .header {
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 35px 0px 66px 0px;
+    @include df-jcc-aic;
+    margin: 35px 0px 52px 0px;
   }
   &__logoNav-wrapper {
     display: flex;
@@ -19,11 +29,21 @@
   }
   &__phone {
     margin-right: 91px;
+    @include df-aic;
   }
+
   &__phone-link {
     font-size: 24px;
     line-height: 35px;
     color: #331a2f;
+    @include df-aic;
+  }
+  &__phone-icon {
+    width: 24px;
+    height: 24px;
+    fill: #331a2f;
+    margin-right: 8px;
+    margin-bottom: 2px;
   }
   // &__login {
   // }
@@ -35,9 +55,7 @@
     transition: all 0.6s;
   }
   &__login-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include df-jcc-aic;
 
     font-weight: 500;
     font-size: 23px;
@@ -87,27 +105,26 @@
 }
 
 .logo {
-  display: flex;
-  margin-right: 31px;
+  margin-right: 45px;
+  @include df-aic;
   // &__link {}
   // &__img {}
   &__slogan {
     border-left: 1px solid rgba(51, 26, 47, 0.5);
-    padding-left: 25px;
     color: #331a2fe5;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     margin-left: 19px;
     max-width: 215px;
+    padding: 13px 0 13px 25px;
   }
 }
 
 .nav {
+  @include df-aic;
   &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include df-jcc-aic;
     width: 100%;
   }
   &__item {
@@ -117,6 +134,12 @@
     font-size: 24px;
     line-height: 35px;
     color: #331a2f;
+  }
+  &__arrow-icon {
+    width: 13px;
+    height: 12px;
+    fill: rgba(51, 26, 47, 0.9);
+    margin-left: 5px;
   }
 }
 .breadcrumb {
@@ -137,7 +160,7 @@
     height: 1px;
     background: rgba(51, 26, 47, 0.5);
     display: inline-block;
-    margin: 4px 8px;
+    margin: 4px 8px 4px 2px;
   }
   // &__item-last {
   // }
@@ -150,7 +173,7 @@
     margin-right: 30px;
   }
   &__inner {
-    margin-top: 15px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
   }
@@ -170,6 +193,19 @@
     font-size: 20px;
     line-height: 29px;
     text-transform: uppercase;
+    display: flex;
+    font-weight: 700;
+
+    & > span {
+      padding-left: 15px;
+    }
+  }
+  &__wallet-icon {
+    fill: #cf51ce;
+    width: 48px;
+    height: 48px;
+
+    margin-right: 10px;
   }
   &__price-number {
     font-weight: 700;
@@ -201,9 +237,7 @@
     margin-bottom: 85px;
   }
   &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include df-jcc-aic;
   }
   // &__content-first {}
   // &__content-img {}
@@ -249,8 +283,7 @@
   }
   &__list {
     margin-top: 85px;
-    display: flex;
-    justify-content: space-between;
+    @include df-jcc;
     align-items: start;
   }
   &__item {
