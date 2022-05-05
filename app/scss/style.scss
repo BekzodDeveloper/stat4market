@@ -16,6 +16,21 @@
   @include df-jcc;
   align-items: center;
 }
+
+.background-images {
+  &__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__right {
+    position: absolute;
+    top: 380px;
+    right: 0;
+  }
+}
+
+
 .header {
   &__inner {
     @include df-jcc-aic;
@@ -162,13 +177,9 @@
     display: inline-block;
     margin: 4px 8px 4px 2px;
   }
-  // &__item-last {
-  // }
 }
 
 .offer {
-  height: 100%;
-  min-height: 682px;
   &__content {
     margin-right: 30px;
   }
@@ -206,6 +217,12 @@
     height: 48px;
 
     margin-right: 10px;
+  }
+  &__rubl-icon {
+    fill: #331a2f;
+    width: 20px;
+    height: 23px;
+    margin-left: 5px;
   }
   &__price-number {
     font-weight: 700;
@@ -315,9 +332,5 @@
   }
 }
 
-.footer {
-  background-color: #cf51ce;
-  height: 50px;
-}
 
 @import "media";

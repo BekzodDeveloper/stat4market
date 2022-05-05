@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <div class="background-images">
+      
+      <img src="images/left-bg.png" alt="" class="background-images__left">
+      <img src="images/right-bg.png" alt="" class="background-images__right">
+
+    </div>
     <header class="header">
       <div class="container">
         <div class="header__inner">
@@ -59,6 +65,7 @@
         </div>
       </div>
     </header>
+  
     <div class="wrapper">
       <main class="main">
         <section class="offer">
@@ -97,6 +104,7 @@
                 </li>
               </ul>
             </nav>
+            
             <div class="offer__inner">
               <div class="offer__content">
                 <h1 class="offer__title">
@@ -106,7 +114,12 @@
                   <svg class="offer__wallet-icon">
                     <use xlink:href="images/icons/sprites.svg#wallet"></use>
                   </svg>
-                  <span>от <span class="offer__price-number">19 900</span> <b>₽</b></span>
+                  <span
+                    >от <span class="offer__price-number">19 900</span>
+                    <svg class="offer__rubl-icon">
+                      <use xlink:href="images/icons/sprites.svg#rubl"></use>
+                    </svg>
+                  </span>
                 </p>
                 <div class="offer__content-text">
                   <p>
@@ -128,16 +141,30 @@
                 </div>
               </div>
               <div class="offer__content-image">
-                <img
-                  class="offer__img"
-                  src="./images/offer-img-desktop.png"
-                  alt="Offer img"
-                />
+                <picture>
+                  
+                  <source
+                    class="offer__img"
+                    type="image/webp"
+                    srcset="./images/webp/offer-img-mob.webp"
+                    media="(max-width:768px)"
+                  />
+                  <source
+                    class="offer__img"
+                    type="image/webp"
+                    srcset="./images/webp/offer-img-desktop.webp"
+                  />
+                  <img
+                    class="offer__img"
+                    src="./images/offer-img-desktop.png"
+                    alt="Offer img"
+                  />
+                </picture>
               </div>
             </div>
           </div>
         </section>
-
+<!--   
         <section class="history">
           <div class="history__container">
             <div class="history__inner">
@@ -147,7 +174,14 @@
               </h2>
               <div class="history__content history__content-first">
                 <div class="history__content-img">
+                  <picture>
+                    <source
+                    type="image/webp"
+                    srcset="./images/webp/his-img-1.webp"
+                    alt="History img"
+                  />
                   <img src="images/his-img-1.png" alt="History img" />
+                  </picture>
                 </div>
                 <div class="history__content-text">
                   <p>
@@ -174,12 +208,19 @@
                   </p>
                 </div>
                 <div class="history__content-img">
+                  <picture>
+                    <source
+                    type="image/webp"
+                    srcset="./images/webp/his-img-2.webp"
+                    alt="History img"
+                  />
                   <img src="images/his-img-2.png" alt="History img" />
+                  </picture>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </section> 
 
         <section class="features">
           <div class="container">
@@ -250,9 +291,10 @@
             </div>
           </div>
         </section>
+        -->
       </main>
       <footer class="footer"></footer>
-    </div>
+    </div> 
 
     <script src="js/main.min.js"></script>
   </body>
