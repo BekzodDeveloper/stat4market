@@ -1,22 +1,39 @@
-// const { src, dest, watch, parallel, series }  = require('gulp');
-
-// const scss          = require('gulp-sass')(require('sass'));
-// const concat        = require('gulp-concat');
-// const browserSync   = require('browser-sync').create();
-// const uglify        = require('gulp-uglify-es').default;
-// const autoprefixer  = require('gulp-autoprefixer');
-// const imagemin      = require('gulp-imagemin');
-// const del           = require('del');
-
 const { src, dest, watch, parallel, series } = require("gulp");
-
 const scss = require("gulp-sass")(require("sass"));
-import concat from "gulp-concat";
+const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create();
 const uglify = require("gulp-uglify-es").default;
-import autoprefixer from "gulp-autoprefixer";
-import imagemin from "gulp-imagemin";
-import del from "del";
+const autoprefixer = require("gulp-autoprefixer");
+const imagemin = require("gulp-imagemin");
+ const del = require("del");
+
+// const { src, dest, watch, parallel, series } = require("gulp");
+// import { src, dest, watch, parallel, series } from "gulp";
+
+// const scss = require("gulp-sass")(require("sass"));
+// import dartSass from "sass";
+// import gulpSass from "gulp-sass";
+// const sass = gulpSass(dartSass);
+
+// // const concat = require("gulp-concat");
+// import concat from "gulp-concat";
+
+// // const browserSync = require("browser-sync").create();
+// import gulpBrowserSync from "browser-sync";
+// const browserSync = gulpBrowserSync.create();
+
+// // const uglify = require("gulp-uglify-es").default;
+// import gulpUglify from "gulp-uglify-es";
+// const uglify = gulpUglify.default;
+
+// // const autoprefixer = require("gulp-autoprefixer");
+// import autoprefixer from "gulp-autoprefixer";
+
+// // const imagemin = require("gulp-imagemin");
+// import imagemin from "gulp-imagemin";
+
+// // const del = require("del");
+// import del from "del";
 
 function browsersync() {
   browserSync.init({
@@ -46,7 +63,7 @@ function images() {
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "app/js/main.js"])
+  return src(["app/js/main.js"])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
