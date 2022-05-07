@@ -7,34 +7,6 @@ const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin");
  const del = require("del");
 
-// const { src, dest, watch, parallel, series } = require("gulp");
-// import { src, dest, watch, parallel, series } from "gulp";
-
-// const scss = require("gulp-sass")(require("sass"));
-// import dartSass from "sass";
-// import gulpSass from "gulp-sass";
-// const sass = gulpSass(dartSass);
-
-// // const concat = require("gulp-concat");
-// import concat from "gulp-concat";
-
-// // const browserSync = require("browser-sync").create();
-// import gulpBrowserSync from "browser-sync";
-// const browserSync = gulpBrowserSync.create();
-
-// // const uglify = require("gulp-uglify-es").default;
-// import gulpUglify from "gulp-uglify-es";
-// const uglify = gulpUglify.default;
-
-// // const autoprefixer = require("gulp-autoprefixer");
-// import autoprefixer from "gulp-autoprefixer";
-
-// // const imagemin = require("gulp-imagemin");
-// import imagemin from "gulp-imagemin";
-
-// // const del = require("del");
-// import del from "del";
-
 function browsersync() {
   browserSync.init({
     server: {
